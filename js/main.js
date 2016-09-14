@@ -1,9 +1,13 @@
 $(document).ready(function() {
 
+  var screenWidth = window.innerWidth;
+  if (screenWidth < 768) {
+    $("#nav-list").removeClass('navbar-fixed-top');
+  }
+
   $(".navbar-toggle").blur(function (event) {
-    var screenWidth = window.innerWidth;
     if (screenWidth < 768) {
-        $("#collapsable-nav").collapse('hide');
+        $("#collapsable-nav").collapse('hide')
     }
   });
 

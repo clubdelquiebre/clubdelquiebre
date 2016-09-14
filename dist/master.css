@@ -60,6 +60,8 @@ body {
   margin-top: 10px;
   margin-bottom: 0px;
   box-shadow: inset 0 0 50px black;
+  position: relative;
+  z-index: 1000;
 }
 
 #nav-list {
@@ -67,17 +69,21 @@ body {
   margin-left: 195px;
 }
 
-@media screen and (max-width: 767px) {
-  #nav-list {
-    margin-left: 30px;
-    margin-top: 20px;
-    margin-right: 80px;
-  }
-}
-
 #nav-list li a {
   color: white;
   cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  #nav-list {
+    margin: 15px 120px 0 0;
+  }
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
 }
 
 .box h1 {
@@ -109,7 +115,7 @@ body {
   border: 3px solid darkgoldenrod;
   border-radius: 50%;
   box-shadow: 0 2px 15px goldenrod;
-  margin: 0px 50px 35px 20px;
+  margin: 5px 50px 35px 20px;
   -webkit-animation: rotate 10s linear 3s infinite;
           animation: rotate 10s linear 3s infinite;
   -webkit-perspective: 200px;
@@ -120,9 +126,10 @@ body {
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .logo-img {
+    margin-top: 25px;
+    margin-bottom: 70px;
     height: 150px;
     width: 127px;
-    margin-right: 35px;
   }
 }
 
@@ -142,19 +149,37 @@ body {
   background-color: black;
 }
 
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .bg-wrapper {
+    padding: 35px 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .bg-wrapper {
+    padding: 25px 20px;
+  }
+}
+
 .bg-wrapper p {
   margin-right: 40px;
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .bg-wrapper p {
-    margin-right: 10px;
+    margin-right: 15px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .bg-wrapper p {
     margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .bg-wrapper p {
+    margin: auto;
   }
 }
 
@@ -168,8 +193,15 @@ body {
   margin-right: auto;
 }
 
-#proximo .bg-wrapper {
-  padding-bottom: 20px;
+#proximo .bg-wrapper .logo-img {
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  #proximo .bg-wrapper .logo-img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
 
 #module-1 {
@@ -190,8 +222,7 @@ body {
     border: 4px solid darkgoldenrod;
     border-radius: 50%;
     box-shadow: 0 2px 20px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 5px auto 25px auto;
     -webkit-animation: rotate 10s linear 1s infinite;
             animation: rotate 10s linear 1s infinite;
     -webkit-perspective: 200px;
