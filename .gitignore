@@ -38,6 +38,9 @@ $RECYCLE.BIN/
 .TemporaryItems
 .Trashes
 .VolumeIcon.icns
+*.sass
+gulpfile.js
+package.json
 
 # Directories potentially created on remote AFP share
 .AppleDB
@@ -48,6 +51,3 @@ Temporary Items
 
 # CUSTOM DIRECTORYS & FILES
 node_modules
-gulpfile.js
-package.json
-*.sass
