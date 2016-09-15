@@ -103,6 +103,15 @@ body {
   text-shadow: 2px 2px #333;
 }
 
+.parallax h1, .parallax h2, .parallax h3 {
+  -webkit-transition: 500ms ease-in-out 50ms;
+  transition: 500ms ease-in-out 50ms;
+}
+
+.parallax h1:hover, .parallax h2:hover, .parallax h3:hover {
+  opacity: 0.8;
+}
+
 .parallax h1 {
   font: 145px 'gill-sans';
   margin-top: 40px;
@@ -188,7 +197,7 @@ body {
 }
 
 #module-4 {
-  background: url(../img/block2.jpg);
+  background: url(../img/module-5.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
