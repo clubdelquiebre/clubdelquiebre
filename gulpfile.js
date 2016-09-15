@@ -31,7 +31,7 @@ gulp.task('browserSync', function() {
     server: {
       baseDir: './'
     },
-    open: true
+    open: false
   });
   gulp.watch('./src/*.html', ['htmlmin'])
   gulp.watch('./src/*.sass', ['sass'])

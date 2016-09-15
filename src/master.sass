@@ -1,3 +1,4 @@
+// GLOBAL RULES //
 *
   outline: 0px solid white
 
@@ -8,13 +9,11 @@
 @font-face
   font-family: 'gill-sans'
   src: url(gill-sans.ttf)
-  font-weight: bold
 
 body
   margin: 0
-  font-size: 20px
+  font: 20px 'agency'
   color: #ccc
-  font-family: 'agency'
   line-height: 1.5
   background-color: black
   letter-spacing: 1px
@@ -24,7 +23,7 @@ body
     50% {transform: rotateY(360deg)}
     100% {transform: rotateY(0deg)}
 
-// HEADER
+// HEADER //
 
 #header-nav
   border: none
@@ -36,57 +35,113 @@ body
   position: relative
   z-index: 1000
 
-#nav-list
-  margin-top: 0px
-  margin-left: 195px
-  li a
-    color: white
-    cursor: pointer
-  @media screen and (max-width: 767px)
-    margin: 15px 120px 0 0
-
-
-.navbar-toggle
-  position: absolute
-  top: 10px
-  right: 20px
-
-.box
-  h1
-    margin-top: 0
+  #nav-list
+    margin-top: 10px
+    margin-left: 14%
+    li a
+      color: white
+      cursor: pointer
+    @media screen and (min-width: 992px) and (max-width: 1199px)
+      margin-left: 95px
+    @media screen and (min-width: 768px) and (max-width: 991px)
+      margin-left: 95px
     @media screen and (max-width: 767px)
-      margin: auto
-      margin-bottom: 15px
-  p
-    margin-bottom: 0
-    @media screen and (max-width: 767px)
-      margin: auto
+      margin: 15px 120px 0 0
 
-.logo-img
-  background: url(../img/logo.jpg)
-  background-size: cover
-  height: 165px
-  width: 140px
-  border: 3px solid darkgoldenrod
-  border-radius: 50%
-  box-shadow: 0 2px 15px goldenrod
-  margin: 5px 50px 35px 20px
-  animation: rotate 10s linear 3s infinite
-  perspective: 200px
-  perspective-origin: 50% 50%
-  @media screen and (min-width: 992px) and (max-width: 1199px)
-    margin-top: 25px
-    margin-bottom: 70px
-    height: 150px
-    width: 127px
+  .navbar-toggle
+    position: absolute
+    top: 10px
+    right: 20px
+
+// END HEADER //
+
+// MAIN PARALLAX //
 
 .parallax
   height: 92vh
   box-shadow: inset 0 0 50px black
   overflow: hidden
+  text-shadow: 2px 2px #333
+  h1
+    font: 145px 'gill-sans'
+    margin-top: 40px
+    letter-spacing: 2px
+  h3
+    font: bold 55px 'agency'
+    letter-spacing: 80px
+    margin-left: 50px
+    margin-top: 0
+  h2
+    margin-top: 200px
+    font: bold 140px 'agency'
+
+#module-1
+  background: url(../img/module-3.jpg)
+    attachment: fixed
+    position: center
+    repeat: no-repeat
+    size: contain
+  @media screen and (max-width: 767px)
+    background: url(../img/logo.jpg)
+      size: cover
+      position: center
+    width: 180px
+    height: 212px
+    border: 4px solid darkgoldenrod
+    border-radius: 50%
+    box-shadow: 0 2px 20px
+    margin: 25px auto 35px auto
+    animation: rotate 10s linear 1s infinite
+    perspective: 200px
+    perspective-origin: 50% 50%
+
+#module-2
+  color: #ec6790
+  background: url(../img/module-2.jpg)
+    attachment: fixed
+    position: center
+    repeat: no-repeat
+    size: contain
+  @media screen and (max-width: 767px)
+    background: url(../img/mob1.jpg)
+      attachment: scroll
+      position: top
+      repeat: no-repeat
+      size: cover
+
+#module-3
+  color: #f2c570
+  background: url(../img/module-1.jpg)
+    attachment: fixed
+    position: center
+    repeat: no-repeat
+    size: contain
+  @media screen and (max-width: 767px)
+    background: url(../img/mob3.jpg)
+      attachment: scroll
+      position: top
+      repeat: no-repeat
+      size: cover
+
+#module-4
+  background: url(../img/block2.jpg)
+    attachment: fixed
+    position: center
+    repeat: no-repeat
+    size: contain
+  @media screen and (max-width: 767px)
+    background: url(../img/mob2.jpg)
+      attachment: scroll
+      position: top
+      repeat: no-repeat
+      size: cover
+
+// END PARALLAX //
+
+// CONTENT BOX //
 
 .mesh
-  background: url(../img/bg-mesh.png), #666
+  background: url(../img/bg-mesh.png), white
   padding: 10px
 
 .bg-wrapper
@@ -94,16 +149,97 @@ body
   background-color: black
   @media screen and (min-width: 992px) and (max-width: 1199px)
     padding: 35px 30px
+  @media screen and (min-width: 768px) and (max-width: 991px)
+    padding: 25px 30px
   @media screen and (max-width: 767px)
     padding: 25px 20px
+  h5
+    font-size: 40px
+    margin-top: 0
+    @media screen and (max-width: 767px)
+      margin: auto
+      margin-bottom: 15px
+      margin-left: 10px
   p
     margin-right: 40px
+    margin-bottom: 0
     @media screen and (min-width: 992px) and (max-width: 1199px)
       margin-right: 15px
     @media screen and (min-width: 768px) and (max-width: 991px)
+      margin-right: auto
       margin-bottom: 15px
     @media screen and (max-width: 767px)
       margin: auto
+      margin-left: 10px
+  a
+    color: goldenrod
+    &:hover, &:focus
+    text-decoration: none
+  span
+    color: goldenrod
+
+.logo-img
+  background: url(../img/logo.jpg)
+    size: cover
+  margin: 20px 50px 35px 20px
+  height: 165px
+  width: 140px
+  border-radius: 50%
+  border: 3px solid darkgoldenrod
+  box-shadow: 0 2px 15px goldenrod
+  animation: rotate 10s linear 3s infinite
+  perspective: 200px
+  perspective-origin: 50% 50%
+  @media screen and (min-width: 1200px)
+    margin-right: 65px
+    @media screen and (min-width: 992px) and (max-width: 1199px)
+      margin-top: 25px
+      margin-bottom: 70px
+      height: 150px
+      width: 127px
+  @media screen and (min-width: 768px) and (max-width: 991px)
+    margin-bottom: 15px
+    margin-right: 25px
+
+
+#proximo
+  p
+    @media screen and (min-width: 768px) and (max-width: 991px)
+      margin-right: 20px
+    @media screen and (max-width: 767px)
+      margin-bottom: 15px
+    &:nth-child(5)
+      @media screen and (max-width: 767px)
+        margin-bottom: 0
+
+  .logo-img
+    margin-top: 10px
+    margin-bottom: 10px
+    @media screen and (min-width: 992px) and (max-width: 1199px)
+      margin-top: 10px
+      margin-bottom: 10px
+    @media screen and (min-width: 768px) and (max-width: 991px)
+      margin-bottom: 15px
+      margin-right: 35px
+
+// END CONTENT BOX //
+
+// PAST EVENTS SECTION //
+
+#past
+  margin: 0
+  .mesh
+    margin-bottom: 25px
+    h5
+      margin: 0
+  .bg-wrapper
+    padding: 30px 50px
+  #prox
+    padding: 0
+  img
+    transition: opacity 500ms ease-in-out 50ms
+    &:hover, &:focus
+      opacity: 0.6
 
 .flyer
   margin-bottom: 35px
@@ -112,67 +248,14 @@ body
     margin-left: auto
     margin-right: auto
 
-#proximo .bg-wrapper
-  .logo-img
-    margin-bottom: 10px
-    @media screen and (min-width: 992px) and (max-width: 1199px)
-      margin-top: 10px
-      margin-bottom: 10px
-
-#module-1
-  background: url(../img/block4.jpg)
-  background-attachment: fixed
-  background-position: center
-  background-repeat: no-repeat
-  background-size: contain
-  @media screen and (max-width: 767px)
-    background: url(../img/logo.jpg)
-    background-size: cover
-    background-position: center
-    height: 177px
-    width: 150px
-    border: 4px solid darkgoldenrod
-    border-radius: 50%
-    box-shadow: 0 2px 20px
-    margin: 5px auto 25px auto
-    animation: rotate 10s linear 1s infinite
-    perspective: 200px
-    perspective-origin: 50% 50%
-
-#module-2
-  background: url(../img/block3.jpg)
-  background-attachment: fixed
-  background-position: center
-  background-repeat: no-repeat
-  background-size: contain
-
-#module-3
-  background: url(../img/block1.jpg)
-  background-attachment: fixed
-  background-position: center
-  background-repeat: no-repeat
-  background-size: contain
-
-#module-4
-  background: url(../img/block2.jpg)
-  background-attachment: fixed
-  background-position: center
-  background-repeat: no-repeat
-  background-size: contain
-
-#past
-  margin: 0
-  h1
-    margin: 40px 0
-  img
-    transition: opacity 500ms ease-in-out 100ms
-    &:hover, &:focus
-      opacity: 0.6
-
-#ending a
-  &:hover, &:focus, &:active
-  background: none
+// END PAST EVENTS //
 
 #footer-wrapper
+  margin-bottom: 5px
   p
     margin-top: 11px
+    margin-right: 10px
+  a
+    color: inherit
+    &:hover, &:focus, &:active
+      background: none
