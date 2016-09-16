@@ -158,6 +158,11 @@ body {
   }
 }
 
+#module-1 h3 {
+  color: transparent;
+  text-shadow: none;
+}
+
 #module-2 {
   color: #ec6790;
   background: url(../img/module-2.jpg);
@@ -194,6 +199,11 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
   }
+}
+
+#module-3 h3 {
+  color: transparent;
+  text-shadow: none;
 }
 
 #module-4 {
