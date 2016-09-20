@@ -70,6 +70,12 @@ body {
 #header-nav #nav-list li a {
   color: white;
   cursor: pointer;
+  -webkit-transition: color 100ms linear;
+  transition: color 100ms linear;
+}
+
+#header-nav #nav-list li a:hover, #header-nav #nav-list li a:focus, #header-nav #nav-list li a:active {
+  color: #999;
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
@@ -98,6 +104,7 @@ body {
 
 .parallax {
   height: 92vh;
+  position: relative;
   box-shadow: inset 0 0 50px black;
   overflow: hidden;
   text-shadow: 2px 2px #333;
@@ -224,6 +231,24 @@ body {
   }
 }
 
+#placeholder-1 {
+  position: absolute;
+  bottom: 50px;
+  height: 10px;
+}
+
+#placeholder-2 {
+  position: absolute;
+  bottom: 50px;
+  height: 10px;
+}
+
+#placeholder-3 {
+  position: absolute;
+  bottom: 50px;
+  height: 10px;
+}
+
 .mesh {
   background: url(../img/bg-mesh.png), white;
   padding: 10px;
@@ -292,7 +317,13 @@ body {
 
 .bg-wrapper a {
   color: goldenrod;
+  -webkit-transition: color 100ms linear;
+  transition: color 100ms linear;
+}
+
+.bg-wrapper a:hover, .bg-wrapper a:focus, .bg-wrapper a:active {
   text-decoration: none;
+  color: darkgoldenrod;
 }
 
 .bg-wrapper span {
